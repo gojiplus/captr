@@ -1,0 +1,15 @@
+citHeader("To cite package 'captr' in publications use:")
+     
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
+vers <- paste("R package version", meta$Version)
+ 
+citEntry(entry="Manual",
+		  title = "captr: R Client to Captricity API",
+		  author = personList(as.person("Gaurav SOod")),
+		  year = year,
+		  note = vers,
+		  textVersion =
+		  paste("Gaurav Sood (",
+				year,
+				"). captr: R Client to Captricity API. ",
+				vers, ".", sep=""))
