@@ -5,3 +5,4 @@ Readme.md
 ^.*\.Rmd$
 ^.*\.md$
 ^\.httr-oauth$
+dev/
