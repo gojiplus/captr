@@ -1,6 +1,6 @@
 #' Create Batch
 #'
-#' @param file_path path to image file
+#' @param batch_name name of the batch
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/}
 #' @examples \dontrun{

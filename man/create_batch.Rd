@@ -7,7 +7,7 @@
 create_batch(batch_name = "")
 }
 \arguments{
-\item{file_path}{path to image file}
+\item{batch_name}{name of the batch}
 }
 \description{
 Create Batch
