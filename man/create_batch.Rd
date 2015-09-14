@@ -10,7 +10,7 @@ create_batch(batch_name = "")
 \item{batch_name}{name of the batch}
 }
 \description{
-Create Batch
+Create a new batch.
 }
 \examples{
 \dontrun{

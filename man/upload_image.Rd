@@ -12,9 +12,7 @@ upload_image(batch_id = "", path_to_image = "")
 \item{path_to_image}{Path to the image you want OCRd}
 }
 \description{
-To digitize documents, create a template using the Captricity Web UI at \url{https://shreddr.captricity.com/job/}
-The template tells Captricity which data to get from where in the document.
-Set the relevant document id using this function
+Upload an image to captricity.
 }
 \examples{
 \dontrun{

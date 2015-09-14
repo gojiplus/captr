@@ -40,8 +40,22 @@ Next, assign the template ID to a batch:
 set_batch_template("batch_id", "template_id")
 ```
 
+Next, upload image(s) to a batch
+```{r upload_image}
+upload_image(batch_id="batch_id", path_to_image="image_path")
+```
 
+Next, check whether the batch is ready to be processed:
 
+```{r test_readiness}
+test_readiness(batch_id="batch_id")
+```
+
+You may also want to find out how much would processing the batch set you back by:
+
+```{r batch_price}
+batch_price(batch_id="batch_id")
+```
 ------------------
 #### License
 Scripts are released under [GNU V3](http://www.gnu.org/licenses/gpl-3.0.en.html).
