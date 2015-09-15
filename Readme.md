@@ -17,6 +17,9 @@ devtools::install_github("soodoku/captr")
 -------------------
 ### Using captr
 
+For a worked out example, see this [vignette](vignette/Using_Captricity.md).
+
+
 Start by getting an application token and setting it using:
 
 ```{r set_token}
@@ -64,6 +67,27 @@ submit_batch(batch_id="batch_id")
 
 Captricity excels in nomenclature confusion. So once a batch is submitted, it is then called a job. The id for the job can be obtained from 
 the list that is returned from `submit_batch`. The field name is `related_job_id`.
+
+To track progress of a job, use:
+
+```{r track_progress}
+track_progress(job_id ="job_id")
+```
+
+List all forms (instance sets) associated with a job:
+```{r list_instance_sets}
+list_instance_sets(job_id="job_id")
+```
+
+If you want to download data from a particular form, use the `list_instance_sets` to get the form (instance_set) id and run:
+```{r get_instance_set}
+get_instance_set(instance_set_id="instance_set_id")
+```
+
+Get csv of all your results from a job:
+```{r get_all}
+get_all(job_id="job_id")
+```
 
 ------------------
 #### License

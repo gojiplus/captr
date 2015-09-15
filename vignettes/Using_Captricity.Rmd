@@ -73,6 +73,29 @@ submit <- submit_batch(batch_id="batch_id")
 submit$related_job_id
 ```
 
+To track progress of a job, use:
+```{r track_progress}
+progress <- track_progress(submit$related_job_id)
+progress$percent_completed
+```
+
+List all forms (instance sets) associated with a job:
+```{r list_instance_sets}
+list_instances <- list_instance_sets(job_id="job_id")
+list_instances[[1]]$id
+```
+
+If you want to download data from a particular form, use the `list_instance_sets` to get the form (instance_set) id and run:
+```{r get_instance_set}
+get_instance_set(instance_set_id=list_instances[[1]]$id)
+```
+
+Get csv of all your results from a job:
+```{r get_all}
+get_all(job_id="job_id")
+```
+
+
 ------------------
 #### License
 Scripts are released under [GNU V3](http://www.gnu.org/licenses/gpl-3.0.en.html).
