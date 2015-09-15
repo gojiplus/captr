@@ -21,9 +21,9 @@ set_batch_template <- function(batch_id="", template_id="")
     if ( is.null(batch_id) | batch_id=="") stop("Provide a Valid Batch ID.")
 
     h <- new_handle()
-    handle_setopt(h,  customrequest = "POST")
+    handle_setopt(h,  customrequest = "GET")
     handle_setheaders(h, "Captricity-API-Token" = app_token)
-    handle_setform(h, documents=template_id)
+    handle_setform(h, documents=as.character(template_id))
 
     tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/batch/", batch_id), handle=h)
     tag        <- fromJSON(rawToChar(tag_con$content))

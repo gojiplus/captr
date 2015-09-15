@@ -23,7 +23,7 @@ upload_image <- function(batch_id="", path_to_image="")
     handle_setheaders(h, "Captricity-API-Token" = app_token)
     handle_setform(h, uploaded_file = form_file(path_to_image))
 
-    tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/batch/", batch_id, "batch-file/"), handle=h)
+    tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/batch/", batch_id, "/batch-file/"), handle=h)
     tag        <- fromJSON(rawToChar(tag_con$content))
     tag
     return(invisible(tag))

@@ -1,0 +1,73 @@
+### captr: R Client for the Captricity API
+
+OCR text and handwritten forms via [https://captricity.com/](https://captricity.com/).
+
+### Installation
+
+To get the current development version from GitHub:
+
+```{r install}
+install.packages("devtools")
+devtools::install_github("soodoku/captr")
+```
+
+-------------------
+### Using captr
+
+Start by getting an application token and setting it using:
+
+```{r set_token}
+library(captr)
+set_token("6dbee39a047c4de2b576b966")
+```
+
+Then, create a batch using:
+
+```{r create_batch}
+batch <- create_batch("wisc_ads")
+batch$id
+```
+
+Once you have created a batch, you need to get the template ID (it tells Captricity what data to pull from where). Captricity requires a template. These templates can be created using the [Web UI](https://shreddr.captricity.com/job/). Here, we have only one template ID (you have have multiple.)
+
+```{r get_tempid}
+tid <- get_template_id()
+tid$id
+```
+
+Next, assign the template ID to a batch:
+```{r temp_batch}
+setbatch <- set_batch_template(batch$id, tid$id)
+```
+
+Next, upload image(s) to a batch
+```{r upload_image}
+img_dir_path <- paste0(path.package("captr"), "/inst/extdata/wisc_ads/")
+upimage <- list()
+j <- 1
+for(i in dir(img_dir_path)){
+	upimage[[j]] <- upload_image(batch_id= batch$id, path_to_image= paste0(img_dir_path, i))
+	j <- j + 1
+}
+
+names(upimage[[5]])
+```
+
+Next, check whether the batch is ready to be processed:
+
+```{r test_readiness}
+tester <- test_readiness(batch_id=batch$id)
+tester$errors
+```
+
+You may also want to find out how much would processing the batch set you back by:
+
+```{r batch_price}
+price <- batch_price(batch_id=batch$id)
+price$total_user_cost_in_cents
+```
+
+------------------
+#### License
+Scripts are released under [GNU V3](http://www.gnu.org/licenses/gpl-3.0.en.html).
+
