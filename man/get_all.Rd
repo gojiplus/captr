@@ -7,14 +7,14 @@
 get_all(job_id = "")
 }
 \arguments{
-\item{instance_set_id}{ID for the form (instance_set) (which you get from list_instance_sets)}
+\item{job_id}{ID for the job}
 }
 \description{
 Get all the data
 }
 \examples{
 \dontrun{
-get_all("job_id")
+get_all(job_id ="job_id")
 }
 }
 \references{

@@ -2,7 +2,7 @@
 #' 
 #' Get all the data
 #' 
-#' @param instance_set_id ID for the form (instance_set) (which you get from list_instance_sets)
+#' @param job_id ID for the job
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/}
 #' @examples \dontrun{

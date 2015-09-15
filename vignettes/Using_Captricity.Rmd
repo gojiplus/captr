@@ -2,46 +2,38 @@
 
 OCR text and handwritten forms via [https://captricity.com/](https://captricity.com/).
 
-### Installation
+#### Installation
 
 To get the current development version from GitHub:
 
-```{r install}
+```{r, eval=FALSE, install}
 install.packages("devtools")
 devtools::install_github("soodoku/captr")
 ```
 
--------------------
-### Using captr
+#### Load lib
+```{r load_lib}
+library(captr)
+```
+
+#### Using captr
 
 Start by getting an application token and setting it using:
 
-```{r set_token}
-library(captr)
+```{r, eval=FALSE, set_token}
+# Not a real token
 set_token("6dbee39a047c4de2b576b966")
 ```
 
 Then, create a batch using:
 
-```{r create_batch}
+```{r, eval=FALSE, create_batch}
 batch <- create_batch("wisc_ads")
 batch$id
 ```
 
-Once you have created a batch, you need to get the template ID (it tells Captricity what data to pull from where). Captricity requires a template. These templates can be created using the [Web UI](https://shreddr.captricity.com/job/). Here, we have only one template ID (you have have multiple.)
-
-```{r get_tempid}
-tid <- get_template_id()
-tid$id
-```
-
-Next, assign the template ID to a batch:
-```{r temp_batch}
-setbatch <- set_batch_template(batch$id, tid$id)
-```
-
 Next, upload image(s) to a batch
-```{r upload_image}
+```{r, eval=FALSE, upload_image}
 img_dir_path <- paste0(path.package("captr"), "/inst/extdata/wisc_ads/")
 upimage <- list()
 j <- 1
@@ -53,23 +45,25 @@ for(i in dir(img_dir_path)){
 names(upimage[[5]])
 ```
 
+Once you have created a batch, you need to [go online](https://shreddr.captricity.com/job/) and create a template which tells Captricity what data to pull from where. (Captricity requires a template for each job and it appears that they can only be built online.) Once you have a template, just go to inbox, and click on process batch and it will bring up potential templates. Pick the template you want and click ok.
+
 Next, check whether the batch is ready to be processed:
 
-```{r test_readiness}
+```{r, eval=FALSE, test_readiness}
 tester <- test_readiness(batch_id=batch$id)
 tester$errors
 ```
 
 You may also want to find out how much would processing the batch set you back by:
 
-```{r batch_price}
+```{r, eval=FALSE, batch_price}
 price <- batch_price(batch_id=batch$id)
 price$total_user_cost_in_cents
 ```
 
 Next, submit the batch for processing. At this point, the batch changes to a **job**.
-```{r submit_batch}
-submit <- submit_batch(batch_id="batch_id")
+```{r, eval=FALSE, submit_batch}
+submit <- submit_batch(batch_id=batch$id)
 submit$related_job_id
 ```
 
@@ -81,18 +75,19 @@ progress$percent_completed
 
 List all forms (instance sets) associated with a job:
 ```{r list_instance_sets}
-list_instances <- list_instance_sets(job_id="job_id")
-list_instances[[1]]$id
+list_instances <- list_instance_sets(job_id=submit$related_job_id)
+list_instances$id
 ```
 
 If you want to download data from a particular form, use the `list_instance_sets` to get the form (instance_set) id and run:
 ```{r get_instance_set}
-get_instance_set(instance_set_id=list_instances[[1]]$id)
+res1 <- get_instance_set(instance_set_id=list_instances$id[1])
+res1$best_estimate
 ```
 
 Get csv of all your results from a job:
 ```{r get_all}
-get_all(job_id="job_id")
+get_all(job_id=submit$related_job_id)
 ```
 
 
