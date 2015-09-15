@@ -56,6 +56,15 @@ You may also want to find out how much would processing the batch set you back b
 ```{r batch_price}
 batch_price(batch_id="batch_id")
 ```
+
+Once you are ready, submit the batch:
+```{r submit_batch}
+submit_batch(batch_id="batch_id")
+```
+
+Captricity excels in nomenclature confusion. So once a batch is submitted, it is then called a job. The id for the job can be obtained from 
+the list that is returned from `submit_batch`. The field name is `related_job_id`.
+
 ------------------
 #### License
 Scripts are released under [GNU V3](http://www.gnu.org/licenses/gpl-3.0.en.html).

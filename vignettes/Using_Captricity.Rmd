@@ -67,6 +67,12 @@ price <- batch_price(batch_id=batch$id)
 price$total_user_cost_in_cents
 ```
 
+Next, submit the batch for processing. At this point, the batch changes to a **job**.
+```{r submit_batch}
+submit <- submit_batch(batch_id="batch_id")
+submit$related_job_id
+```
+
 ------------------
 #### License
 Scripts are released under [GNU V3](http://www.gnu.org/licenses/gpl-3.0.en.html).
