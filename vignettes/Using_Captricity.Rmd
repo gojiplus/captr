@@ -12,7 +12,7 @@ devtools::install_github("soodoku/captr")
 ```
 
 #### Load lib
-```{r load_lib}
+```{r eval=FALSE, load_lib}
 library(captr)
 ```
 
@@ -74,7 +74,7 @@ progress$percent_completed
 ```
 
 List all forms (instance sets) associated with a job:
-```{r list_instance_sets}
+```{r, eval=FALSE, list_instance_sets}
 list_instances <- list_instance_sets(job_id=submit$related_job_id)
 list_instances$id
 ```
@@ -89,7 +89,6 @@ Get csv of all your results from a job:
 ```{r get_all}
 get_all(job_id=submit$related_job_id)
 ```
-
 
 ------------------
 #### License

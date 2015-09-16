@@ -4,10 +4,12 @@
 \alias{get_all}
 \title{Get All the Data For a Particular Job in a csv}
 \usage{
-get_all(job_id = "")
+get_all(job_id = "", output_dir = "./")
 }
 \arguments{
 \item{job_id}{ID for the job}
+
+\item{output_dir}{output directory}
 }
 \description{
 Get all the data
