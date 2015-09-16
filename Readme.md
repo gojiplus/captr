@@ -90,5 +90,5 @@ get_all(job_id="job_id")
 
 ------------------
 #### License
-Scripts are released under [MIT](https://opensource.org/licenses/MIT).
+Scripts are released under the [MIT License](https://opensource.org/licenses/MIT).
 
