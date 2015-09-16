@@ -96,8 +96,7 @@ Get csv of all your results from a job:
 get_all(job_id=submit$related_job_id)
 ```
 
-Unfortunately, Captricity doesn't do a particularly good job at getting you the text. For instance, Captricity considers getting text out from these fields are 'impossible':
-
+Unfortunately, Captricity doesn't do a particularly good job at getting you the text. For instance, Captricity considers getting text from these fields as 'impossible':
 
 ![Impossible](../inst/extdata/wisc_ads_impossibles.png "Impossible")
 
