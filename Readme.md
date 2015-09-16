@@ -3,7 +3,9 @@
 [![GPL-3.0](http://img.shields.io/:license-gpl-blue.svg)](http://opensource.org/licenses/GPL-3.0)
 [![Build Status](https://travis-ci.org/soodoku/captr.svg?branch=master)](https://travis-ci.org/soodoku/captr)
 
-OCR text and handwritten forms using [Captricity](https://captricity.com/). Captricity's big advantage over [Abbyy Cloud OCR](https://github.com/soodoku/abbyyR) is that it allows the user to easily specify the position of text-blocks that want to OCR; they have a simple web-based UI. The quality of the OCR can be checked using `compare_txt` from [recognize](https://github.com/soodoku/recognize).  
+OCR text and handwritten forms using [Captricity](https://captricity.com/). Captricity's big advantage over [Abbyy Cloud OCR](https://github.com/soodoku/abbyyR) is that it allows the user to easily specify the position of text-blocks that want to OCR; they have a simple web-based UI. The quality of the OCR can be checked using `compare_txt` from [recognize](https://github.com/soodoku/recognize). 
+
+Before diving into captr, read this [small vignette](vignette/Using_Captricity.Rmd).
 
 ### Installation
 
@@ -16,9 +18,6 @@ devtools::install_github("soodoku/captr")
 
 -------------------
 ### Using captr
-
-For a worked out example, see this [vignette](vignette/Using_Captricity.md).
-
 
 Start by getting an application token and setting it using:
 
