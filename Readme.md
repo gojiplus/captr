@@ -5,7 +5,7 @@
 
 OCR text and handwritten forms using [Captricity](https://captricity.com/). Captricity's big advantage over [Abbyy Cloud OCR](https://github.com/soodoku/abbyyR) is that it allows the user to easily specify the position of text-blocks that want to OCR; they have a simple web-based UI. The quality of the OCR can be checked using `compare_txt` from [recognize](https://github.com/soodoku/recognize). 
 
-Before diving into captr, read this [small vignette](vignette/Using_Captricity.Rmd).
+Before diving into captr, read this [small vignette](vignettes/Using_Captricity.Rmd).
 
 ### Installation
 
