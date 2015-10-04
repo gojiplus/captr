@@ -1,5 +1,5 @@
 Package: captr
-Title: Access to Capticrity API
+Title: Access to Captricity API
 Version: 0.1
 Authors@R: person("Gaurav", "Sood", email = "gsood07@gmail.com", role = c("aut", "cre"))
 Maintainer: Gaurav Sood <gsood07@gmail.com>
