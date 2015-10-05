@@ -10,6 +10,6 @@ Description: Get text from images of text using Captricity Optical Character Rec
 URL: http://github.com/soodoku/captR
 BugReports: http://github.com/soodoku/captR/issues
 Depends: R (>= 3.2.0)
-License: GPL (>= 2)
+License: MIT + file LICENSE
 LazyData: true
 Imports: curl, jsonlite
