@@ -2,7 +2,5 @@
 ^\.Rproj\.user$
 .travis.yml
 Readme.md
-^.*\.Rmd$
-^.*\.md$
 ^\.httr-oauth$
-dev/
+dev
