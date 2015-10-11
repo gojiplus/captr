@@ -1,6 +1,7 @@
 ### captr: R Client for the Captricity API
 
 [![Build Status](https://travis-ci.org/soodoku/captr.svg?branch=master)](https://travis-ci.org/soodoku/captr)
+[![Build status](https://ci.appveyor.com/api/projects/status/ck34qnr03mpbuke7?svg=true)](https://ci.appveyor.com/project/soodoku/captr)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/captr)](http://cran.r-project.org/web/packages/captr)
 ![](http://cranlogs.r-pkg.org/badges/grand-total/captr)
 
