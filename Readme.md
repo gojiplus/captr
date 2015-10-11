@@ -1,6 +1,5 @@
 ### captr: R Client for the Captricity API
 
-[![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/soodoku/captr.svg?branch=master)](https://travis-ci.org/soodoku/captr)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/captr)](http://cran.r-project.org/web/packages/captr)
 ![](http://cranlogs.r-pkg.org/badges/grand-total/captr)
