@@ -7,7 +7,6 @@
 
 OCR text and handwritten forms using [Captricity](https://captricity.com/). Captricity's big advantage over [Abbyy Cloud OCR](https://github.com/soodoku/abbyyR) is that it allows the user to easily specify the position of text-blocks that want to OCR; they have a simple web-based UI. The quality of the OCR can be checked using `compare_txt` from [recognize](https://github.com/soodoku/recognize). 
 
-Before diving into captr, read this [small vignette](vignettes/Using_Captricity.Rmd).
 
 ### Installation
 
@@ -15,11 +14,18 @@ To get the current development version from GitHub:
 
 ```{r install}
 install.packages("devtools")
-devtools::install_github("soodoku/captr")
+devtools::install_github("soodoku/captR", build_vignettes = TRUE)
 ```
 
 -------------------
 ### Using captr
+
+Read the vignette:
+```
+vignette("using_captr", package = "captR")
+```
+
+or follow the overview below.
 
 Start by getting an application token and setting it using:
 

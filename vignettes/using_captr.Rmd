@@ -1,3 +1,14 @@
+---
+title: "Using captR"
+author: "Gaurav Sood"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using captR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
 ### captr: R Client for the Captricity API
 
 OCR text and handwritten forms via [https://captricity.com/](https://captricity.com/).

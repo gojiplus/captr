@@ -1,5 +1,5 @@
 Package: captr
-Title: Access to Captricity API
+Title: Client for the Captricity API
 Version: 0.1
 Authors@R: person("Gaurav", "Sood", email = "gsood07@gmail.com", role = c("aut", "cre"))
 Maintainer: Gaurav Sood <gsood07@gmail.com>
@@ -12,4 +12,6 @@ BugReports: http://github.com/soodoku/captR/issues
 Depends: R (>= 3.2.0)
 License: MIT + file LICENSE
 LazyData: true
+VignetteBuilder: knitr
 Imports: curl, jsonlite
+Suggests: knitr (>= 1.11)
