@@ -113,8 +113,3 @@ Unfortunately, Captricity doesn't do a particularly good job at getting you the 
 
 
 You can check out the final [csv here](../inst/extdata/Wisc_Ads.csv).
-
-------------------
-#### License
-Scripts are released under [GNU V3](http://www.gnu.org/licenses/gpl-3.0.en.html).
-
