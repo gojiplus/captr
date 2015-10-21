@@ -45,13 +45,9 @@ batch$id
 
 Next, upload image(s) to a batch
 ```{r, eval=FALSE, upload_image}
-img_dir_path <- paste0(path.package("captr"), "/inst/extdata/wisc_ads/")
-upimage <- list()
-j <- 1
-for(i in dir(img_dir_path)){
-	upimage[[j]] <- upload_image(batch_id= batch$id, path_to_image= paste0(img_dir_path, i))
-	j <- j + 1
-}
+path <- system.file("extdata/wisc_ads", package = "captr")
+files <- dir(path, full.path = TRUE)
+upimage <- lapply(files, upload_image, batch_id = batch$id)
 
 names(upimage[[5]])
 ```
