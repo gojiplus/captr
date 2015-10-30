@@ -9,7 +9,7 @@
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/}
 #' @examples \dontrun{
-#' set_template_id("batch_id", "template_id)
+#' set_batch_template("batch_id", template_id)
 #' }
 
 set_batch_template <- function(batch_id="", template_id="")

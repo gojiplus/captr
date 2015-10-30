@@ -1,0 +1,5 @@
+version .2 2015-XX-XX
+-----------------------
+1. Readme now in the CRAN package
+2. Vignette build through knitr
+3. Changed license to MIT
