@@ -1,6 +1,6 @@
 Package: captr
 Title: Client for the Captricity API
-Version: 0.12
+Version: 0.1.2
 Authors@R: person("Gaurav", "Sood", email = "gsood07@gmail.com", role = c("aut", "cre"))
 Maintainer: Gaurav Sood <gsood07@gmail.com>
 Description: Get text from images of text using Captricity Optical Character
