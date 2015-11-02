@@ -10,6 +10,11 @@ OCR text and handwritten forms using [Captricity](https://captricity.com/). Capt
 
 ### Installation
 
+To get the latest version on CRAN:
+```r
+install.packages("captR")
+```
+
 To get the current development version from GitHub:
 
 ```r
