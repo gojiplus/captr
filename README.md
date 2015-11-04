@@ -12,14 +12,14 @@ OCR text and handwritten forms using [Captricity](https://captricity.com/). Capt
 
 To get the latest version on CRAN:
 ```r
-install.packages("captR")
+install.packages("captr")
 ```
 
 To get the current development version from GitHub:
 
 ```r
 install.packages("devtools")
-devtools::install_github("soodoku/captR", build_vignettes = TRUE)
+devtools::install_github("soodoku/captr", build_vignettes = TRUE)
 ```
 
 -------------------
@@ -27,7 +27,7 @@ devtools::install_github("soodoku/captR", build_vignettes = TRUE)
 
 Read the vignette:
 ```r
-vignette("using_captr", package = "captR")
+vignette("using_captr", package = "captr")
 ```
 
 or follow the overview below.
