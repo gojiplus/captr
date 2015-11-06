@@ -2,16 +2,22 @@
 % Please edit documentation in R/set_token.R
 \name{set_token}
 \alias{set_token}
-\title{Sets Application ID and Secret}
+\title{Sets Application Token}
 \usage{
-set_token(appdetails = NULL)
+set_token(app_token = NULL, force = FALSE)
 }
 \arguments{
-\item{appdetails}{Required; A vector of client_id, client_secret. Get these from \url{https://shreddr.captricity.com/developer/}. 
-Set them before you use other functions.}
+\item{app_token}{Application token. Get these from \url{https://shreddr.captricity.com/developer/}.}
+
+\item{force}{Force change the \code{CaptricityToken} stored in the environment}
 }
 \description{
-Set Client ID and Secret. Needed for interfacing with Clarifai. Run this before anything else.
+Captricity requires an application token to use the API. Get the token from \url{https://shreddr.captricity.com/}.
+The functions looks for \code{CaptricityToken} in the environment. If it doesn't find it or if change is forced, 
+it looks for arguments passed in the function. If it fails to find that, it asks for input.
+}
+\details{
+Run this function before anything else.
 }
 \examples{
 \dontrun{
@@ -21,9 +27,7 @@ set_token("app_token")
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-\keyword{Client}
-\keyword{ID}
-\keyword{Secret}
+\keyword{Application}
 \keyword{Sets}
-\keyword{and}
+\keyword{Token}
 
