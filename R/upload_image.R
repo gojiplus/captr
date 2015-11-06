@@ -12,9 +12,9 @@
 
 upload_image <- function(batch_id="", path_to_image="")
 {
-    app_token = getOption("CaptricityToken")
-    if( is.null(app_token)) stop("Please set application token using set_token('app_token').")
-    
+    app_token = Sys.getenv('CaptricityToken')
+    if(identical(env_token, "")) stop("Please set application token using set_token('app_token').")
+
     if ( is.null(batch_id) | batch_id=="") stop("Provide a Valid Batch ID.")
     if ( is.null(path_to_image) | path_to_image=="") stop("Provide a Valid Path To Image.")
 

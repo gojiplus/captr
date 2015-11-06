@@ -11,8 +11,8 @@
 
 create_batch <- function(batch_name="")
 {
-    app_token = getOption("CaptricityToken")
-    if( is.null(app_token)) stop("Please set application token using set_token('app_token').")
+    app_token = Sys.getenv('CaptricityToken')
+    if(identical(env_token, "")) stop("Please set application token using set_token('app_token').")
     
     h <- new_handle()
     handle_setopt(h,  customrequest = "POST")
