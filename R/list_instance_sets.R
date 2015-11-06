@@ -10,12 +10,11 @@
 #' list_instance_sets(job_id = "job_id")
 #' }
 
-list_instance_sets <- function(job_id="")
-{
+list_instance_sets <- function(job_id="") {
     
     app_token = Sys.getenv('CaptricityToken')
-    if(identical(env_token, "")) stop("Please set application token using set_token('app_token').")
-
+    if(identical(app_token, "")) stop("Please set application token using set_token('app_token').")
+ 
     if ( is.null(job_id) | job_id=="") stop("Provide a Valid Job ID.")
 
     h <- new_handle()

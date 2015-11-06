@@ -9,12 +9,11 @@
 #' test_readiness("batch_id")
 #' }
 
-test_readiness <- function(batch_id="")
-{
+test_readiness <- function(batch_id="") {
     
     app_token = Sys.getenv('CaptricityToken')
-    if(identical(env_token, "")) stop("Please set application token using set_token('app_token').")
-
+    if(identical(app_token, "")) stop("Please set application token using set_token('app_token').")
+ 
     if ( is.null(batch_id) | batch_id=="") stop("Provide a Valid Batch ID.")
 
     h <- new_handle()
