@@ -1,6 +1,5 @@
 This is a resubmission.
-
----
+-------------------------
 
 ## Test environments
 * local OS X install, R 3.2.2
