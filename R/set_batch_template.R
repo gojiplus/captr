@@ -14,15 +14,14 @@
 
 set_batch_template <- function(batch_id="", template_id="") {
 
-    app_token = Sys.getenv('CaptricityToken')
-    if(identical(app_token, "")) stop("Please set application token using set_token('app_token').")
+    captr_CHECKAUTH()
  
     if ( is.null(template_id) | template_id=="") stop("Provide a Valid Template ID.")
     if ( is.null(batch_id) | batch_id=="") stop("Provide a Valid Batch ID.")
 
     h <- new_handle()
     handle_setopt(h,  customrequest = "PUT")
-    handle_setheaders(h, "Captricity-API-Token" = app_token)
+    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
     handle_setform(h, documents=as.character(template_id))
 
     tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/batch/", batch_id), handle=h)

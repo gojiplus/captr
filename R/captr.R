@@ -15,3 +15,13 @@
 #' @docType package
 #' @author Gaurav Sood
 NULL
+
+#' Check if authentication information is there
+#' 
+
+captr_CHECKAUTH <- function() {
+
+	app_token = Sys.getenv('CaptricityToken')
+    if(identical(app_token, "")) stop("Please set application token using set_token('app_token').")
+   
+}

@@ -12,12 +12,11 @@
 
 get_template_id <- function() {
     
-    app_token = Sys.getenv('CaptricityToken')
-    if(identical(app_token, "")) stop("Please set application token using set_token('app_token').")
+    captr_CHECKAUTH()
  
     h <- new_handle()
     handle_setopt(h,  customrequest = "POST")
-    handle_setheaders(h, "Captricity-API-Token" = app_token)
+    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
 
     tag_con    <- curl_fetch_memory("https://shreddr.captricity.com/api/v1/document/", handle=h)
     tag        <- fromJSON(rawToChar(tag_con$content))
