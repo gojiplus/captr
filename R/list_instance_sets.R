@@ -14,7 +14,7 @@ list_instance_sets <- function(job_id="") {
     
     captr_CHECKAUTH()
  
-    if ( is.null(job_id) | job_id=="") stop("Provide a Valid Job ID.")
+    if ( is.null(job_id) | identical(job_id, "")) stop("Provide a Valid Job ID.")
 
     h <- new_handle()
     handle_setopt(h,  customrequest = "GET")

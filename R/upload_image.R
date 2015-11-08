@@ -14,8 +14,8 @@ upload_image <- function(batch_id="", path_to_image="") {
     
     captr_CHECKAUTH()
  
-    if ( is.null(batch_id) | batch_id=="") stop("Provide a Valid Batch ID.")
-
+    if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
+        
     if (!file.exists(path_to_image)) stop("File Doesn't Exist. Please check the path.")
 
     h <- new_handle()

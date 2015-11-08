@@ -16,8 +16,8 @@ set_batch_template <- function(batch_id="", template_id="") {
 
     captr_CHECKAUTH()
  
-    if ( is.null(template_id) | template_id=="") stop("Provide a Valid Template ID.")
-    if ( is.null(batch_id) | batch_id=="") stop("Provide a Valid Batch ID.")
+    if ( is.null(template_id) | identical(template_id, "")) stop("Provide a Valid Template ID.")
+    if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 
     h <- new_handle()
     handle_setopt(h,  customrequest = "PUT")
