@@ -19,6 +19,6 @@ Imports:
     curl,
     jsonlite
 Suggests:
-	testthat,
+    testthat,
     knitr (>= 1.11)
-RoxygenNote: 5.0.0
+RoxygenNote: 5.0.1
