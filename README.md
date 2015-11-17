@@ -4,6 +4,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ck34qnr03mpbuke7?svg=true)](https://ci.appveyor.com/project/soodoku/captr)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/captr)](http://cran.r-project.org/web/packages/captr)
 ![](http://cranlogs.r-pkg.org/badges/grand-total/captr)
+[![Coverage Status](https://img.shields.io/codecov/c/github/soodoku/captr/master.svg)](https://codecov.io/github/soodoku/captr?branch=master)
 
 OCR text and handwritten forms using [Captricity](https://captricity.com/). Captricity's big advantage over [Abbyy Cloud OCR](https://github.com/soodoku/abbyyR) is that it allows the user to easily specify the position of text-blocks that want to OCR; they have a simple web-based UI. The quality of the OCR can be checked using `compare_txt` from [recognize](https://github.com/soodoku/recognize). 
 
