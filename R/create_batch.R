@@ -4,7 +4,7 @@
 #' 
 #' @param batch_name name of the batch
 #' @export
-#' @references \url{https://shreddr.captricity.com/developer/}
+#' @references \url{https://shreddr.captricity.com/developer/api-reference/#v1-batch}
 #' @examples \dontrun{
 #' create_batch(batch_name="name_of_batch")
 #' }
@@ -25,3 +25,5 @@ create_batch <- function(batch_name="")
     return(invisible(tag))
 
 }
+
+
