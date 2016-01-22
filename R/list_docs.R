@@ -8,21 +8,13 @@
 #' list_docs()
 #' }
 
-list_docs <- function()
-{
+list_docs <- function() {
     
-    captr_CHECKAUTH()
-  
-    h <- new_handle()
-    handle_setopt(h,  customrequest = "GET")
-    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
+    res <- captr_GET("document/", NULL)
 
-    tag_con    <- curl_fetch_memory("https://shreddr.captricity.com/api/v1/document/", handle=h)
-    tag        <- fromJSON(rawToChar(tag_con$content))
-    tag
+    cat("No. of document resources:", nrow(res), "\n")
 
-    return(invisible(tag))
-
+    return(invisible(res))
 }
 
 

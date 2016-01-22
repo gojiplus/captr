@@ -8,21 +8,13 @@
 #' list_batches()
 #' }
 
-list_batches <- function()
-{
-    
-    captr_CHECKAUTH()
-  
-    h <- new_handle()
-    handle_setopt(h,  customrequest = "GET")
-    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
+list_batches <- function() {
+      
+    res <- captr_GET("batch/", NULL)
 
-    tag_con    <- curl_fetch_memory("https://shreddr.captricity.com/api/v1/batch/", handle=h)
-    tag        <- fromJSON(rawToChar(tag_con$content))
-    tag
+    cat("No. of batches:", nrow(res), "\n")
 
-    return(invisible(tag))
+    return(invisible(res))
 
 }
-
 
