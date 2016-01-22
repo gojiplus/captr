@@ -2,6 +2,7 @@
 
 export(batch_price)
 export(create_batch)
+export(delete_batch)
 export(get_all)
 export(get_batch_details)
 export(get_instance_set)

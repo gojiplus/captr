@@ -1,3 +1,10 @@
+version .1.5 2016-2-XX
+--------------------
+1. Abstracted simple GET
+2. More cats for functions
+3. 
+
+
 version .1.4 2016-1-20
 --------------------
 1. More unit tests

@@ -25,4 +25,3 @@ track_progress <- function(job_id="") {
     return(invisible(tag))
     
 }
-
