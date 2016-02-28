@@ -11,7 +11,7 @@ vignette: >
 
 ### captr: R Client for the Captricity API
 
-OCR text and handwritten forms via [https://captricity.com/](https://captricity.com/).
+OCR text and handwritten forms via [http://captricity.com/](http://captricity.com/).
 
 #### Installation
 
