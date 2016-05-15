@@ -2,4 +2,4 @@
 .Rhistory
 .RData
 dev/
-tests/testthat/token_file.rds
+tests/testthat/captr_key

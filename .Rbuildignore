@@ -5,4 +5,4 @@
 ^\.httr-oauth$
 dev
 ^cran-comments.md$
-^tests/testthat/token_file.rds$
+^tests\testthat\captr_key.enc$
