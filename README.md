@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/soodoku/captr.svg?branch=master)](https://travis-ci.org/soodoku/captr)
 [![Build status](https://ci.appveyor.com/api/projects/status/ck34qnr03mpbuke7?svg=true)](https://ci.appveyor.com/project/soodoku/captr)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/captr)](http://cran.r-project.org/web/packages/captr)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/captr)](https://cran.r-project.org/package=captr)
 ![](http://cranlogs.r-pkg.org/badges/grand-total/captr)
 [![Coverage Status](https://img.shields.io/codecov/c/github/soodoku/captr/master.svg)](https://codecov.io/github/soodoku/captr?branch=master)
 
