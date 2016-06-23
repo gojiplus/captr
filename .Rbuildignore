@@ -6,3 +6,5 @@
 dev
 ^cran-comments.md$
 ^tests\testthat\captr_key.enc$
+^.gitignore$
+^.gitattributes$
