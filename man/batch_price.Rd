@@ -4,10 +4,15 @@
 \alias{batch_price}
 \title{Price of a Batch}
 \usage{
-batch_price(batch_id = "")
+batch_price(batch_id = "", ...)
 }
 \arguments{
-\item{batch_id}{ID for the batch}
+\item{batch_id}{ID for the batch; Required; String.}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
+}
+\value{
+named list
 }
 \description{
 The price for processing the batch.

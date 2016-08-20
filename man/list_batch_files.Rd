@@ -2,15 +2,20 @@
 % Please edit documentation in R/list_batch_files.R
 \name{list_batch_files}
 \alias{list_batch_files}
-\title{Test Readiness of a Batch}
+\title{List all the files in a batch}
 \usage{
-list_batch_files(batch_id = "")
+list_batch_files(batch_id = "", ...)
 }
 \arguments{
-\item{batch_id}{ID for the batch}
+\item{batch_id}{ID for the batch; Required; String}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
+}
+\value{
+list. If no files in a batch, an empty list
 }
 \description{
-Check if the batch is ready to be processed
+List all the files in a batch
 }
 \examples{
 \dontrun{
