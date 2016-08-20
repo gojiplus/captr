@@ -13,7 +13,7 @@ get_instance_set <- function(instance_set_id="") {
     
     captr_CHECKAUTH()
  
-    if ( is.null(instance_set_id) | identical(instance_set_id, "")) stop("Provide a Valid Job ID.")
+    if ( is.null(instance_set_id) | identical(instance_set_id, "")) stop("Provide a Valid Instance Set ID.")
 
     h <- new_handle()
     handle_setopt(h,  customrequest = "GET")
