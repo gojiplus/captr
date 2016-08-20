@@ -26,7 +26,11 @@ test_that("batch creation happens successfully", {
   l_files <- list_batch_files(batch$id)
   expect_that(l_files,  is_a("list"))
 
+  ready <- test_readiness(batch$id)
+  expect_equal(length(ready$errors) > 1, TRUE)
+
   del <- delete_batch(batch$id)
   expect_that(del, is_a("list"))
+
 
 })
