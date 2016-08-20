@@ -20,6 +20,11 @@ test_that("batch creation happens successfully", {
   price <- batch_price(batch$id)
   expect_that(price, is_a("list"))
 
+  details <- get_batch_details(batch$id)
+  expect_that(details,  is_a("list"))
+
+  l_files <- list_batch_files(batch$id)
+  expect_that(l_files,  is_a("list"))
 
   del <- delete_batch(batch$id)
   expect_that(del, is_a("list"))
