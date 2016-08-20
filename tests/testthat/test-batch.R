@@ -29,6 +29,9 @@ test_that("batch creation happens successfully", {
   ready <- test_readiness(batch$id)
   expect_equal(length(ready$errors) > 1, TRUE)
 
+  submit <- submit_batch(batch$id)
+  expect_equal(submit$message, "Batch is not ready to submit")
+
   del <- delete_batch(batch$id)
   expect_that(del, is_a("list"))
 
