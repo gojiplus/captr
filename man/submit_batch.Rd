@@ -4,13 +4,15 @@
 \alias{submit_batch}
 \title{Submit the Batch for Processing}
 \usage{
-submit_batch(batch_id = "")
+submit_batch(batch_id = "", ...)
 }
 \arguments{
-\item{batch_id}{ID for the batch}
+\item{batch_id}{ID for the batch. Required. String.}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_POST}}.}
 }
 \description{
-Submit the batch for processing.
+Submit the Batch for Processing
 }
 \examples{
 \dontrun{
