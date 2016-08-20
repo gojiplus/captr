@@ -1,6 +1,10 @@
 #' List Batches
 #'
 #' A list of batches owned by the calling account.
+#'
+#' @param \dots Additional arguments passed to \code{\link{captr_GET}}.
+#'
+#' @return data.frame. Prints number of batches by default.
 #' 
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/api-reference/#v1-batches}
@@ -8,9 +12,9 @@
 #' list_batches()
 #' }
 
-list_batches <- function() {
+list_batches <- function(...) {
       
-    res <- captr_GET("batch/", NULL)
+    res <- captr_GET("batch/", ...)
 
     cat("No. of batches:", nrow(res), "\n")
 

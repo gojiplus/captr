@@ -4,7 +4,14 @@
 \alias{list_docs}
 \title{List Documents}
 \usage{
-list_docs()
+list_docs(...)
+}
+\arguments{
+\item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
+}
+\value{
+data.frame
+Prints total number of documents by default.
 }
 \description{
 A list of document resources owned by the calling account.

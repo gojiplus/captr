@@ -14,7 +14,7 @@ Check what percentage of the job is digitized
 }
 \examples{
 \dontrun{
-submit_batch("batch_id")
+track_progress("job_id")
 }
 }
 \references{

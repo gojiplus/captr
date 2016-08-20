@@ -3,10 +3,13 @@
 #' Check what percentage of the job is digitized
 #' 
 #' @param job_id ID for the job (which you get from related_job_id field of submit_batch)
+#' 
 #' @export
+#' 
 #' @references \url{https://shreddr.captricity.com/developer/}
+#' 
 #' @examples \dontrun{
-#' submit_batch("batch_id")
+#' track_progress("job_id")
 #' }
 
 track_progress <- function(job_id="") {

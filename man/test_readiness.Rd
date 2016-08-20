@@ -4,10 +4,12 @@
 \alias{test_readiness}
 \title{Test Readiness of a Batch}
 \usage{
-test_readiness(batch_id = "")
+test_readiness(batch_id = "", ...)
 }
 \arguments{
-\item{batch_id}{ID for the batch}
+\item{batch_id}{ID for the batch. Required. String.}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
 }
 \description{
 Check if the batch is ready to be processed

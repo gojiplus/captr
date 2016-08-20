@@ -1,8 +1,8 @@
 # captr 0.2.0
 
-* Added user_profile
 * Using new abstract GET/POST functions: create_batch, get_batch_details, batch_price, list_batch_files
 * Functions using new abstract GET/POST functions also support the dots --- passing optional stuff to curl
+* Fixed implementation of user_profile
 
 # captr 0.1.5
 

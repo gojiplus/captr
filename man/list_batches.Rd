@@ -4,7 +4,13 @@
 \alias{list_batches}
 \title{List Batches}
 \usage{
-list_batches()
+list_batches(...)
+}
+\arguments{
+\item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
+}
+\value{
+data.frame. Prints number of batches by default.
 }
 \description{
 A list of batches owned by the calling account.
