@@ -1,3 +1,9 @@
+# captr 0.2
+
+* Added user_profile
+* Using new abstract functions: create_batch, get_batch_details
+* More functions support the dots --- pass optional stuff to CURL
+
 # captr 0.1.5
 
 * Abstracted simple GET  

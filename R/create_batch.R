@@ -3,7 +3,8 @@
 #' Create a new batch. 
 #' 
 #' @param batch_name name of the batch; Required; character
-#' 
+#' @param \dots Additional arguments passed to \code{\link{captr_POST}}.
+#'  
 #' @return List of length 26. Includes information like created_by, user_id, etc.
 #' 
 #' @export
@@ -12,19 +13,17 @@
 #' create_batch(batch_name="name_of_batch")
 #' }
 
-create_batch <- function(batch_name="") {
+create_batch <- function(batch_name = NULL, ...) {
     
     captr_CHECKAUTH()
-  
-    h <- new_handle()
-    handle_setopt(h,  customrequest = "POST")
-    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
-    handle_setform(h, name= batch_name)
+  	
+  	if (is.null(batch_name)) stop("Specify a valid batch_name.") 
 
-    tag_con    <- curl_fetch_memory("https://shreddr.captricity.com/api/v1/batch/", handle=h)
-    tag        <- fromJSON(rawToChar(tag_con$content))
-    tag
-    return(invisible(tag))
+  	query <- list(name = batch_name)
+
+	res <- captr_POST(path="batch/", query, ...)
+
+    invisible(res)
 }
 
 

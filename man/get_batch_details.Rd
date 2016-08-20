@@ -4,10 +4,12 @@
 \alias{get_batch_details}
 \title{Get Details of a particular batch}
 \usage{
-get_batch_details(batch_id = "")
+get_batch_details(batch_id = "", ...)
 }
 \arguments{
 \item{batch_id}{ID for the batch}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
 }
 \value{
 list of length 26.

@@ -2,26 +2,24 @@
 #'
 #' Provides account information for the provided API Token.
 #' 
+#' @param \dots Additional arguments passed to \code{\link{captr_GET}}.
+#' 
+#' @return named list
+#' 
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/api-reference/#v1-user_profile}
 #' @examples \dontrun{
-#' list_batches()
+#' user_profile()
 #' }
 
-list_batches <- function()
+user_profile <- function(...)
 {
     
     captr_CHECKAUTH()
   
-    h <- new_handle()
-    handle_setopt(h,  customrequest = "GET")
-    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
+	res <- captr_GET(path="account/user-profile", ...)
 
-    tag_con    <- curl_fetch_memory("https://shreddr.captricity.com/api/v1/account/user-profile", handle=h)
-    tag        <- fromJSON(rawToChar(tag_con$content))
-    tag
-
-    return(invisible(tag))
+    return(invisible(res))
 
 }
 

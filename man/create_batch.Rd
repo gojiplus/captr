@@ -4,10 +4,12 @@
 \alias{create_batch}
 \title{Create Batch}
 \usage{
-create_batch(batch_name = "")
+create_batch(batch_name = NULL, ...)
 }
 \arguments{
 \item{batch_name}{name of the batch; Required; character}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_POST}}.}
 }
 \value{
 List of length 26. Includes information like created_by, user_id, etc.
