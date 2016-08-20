@@ -4,7 +4,13 @@
 \alias{get_template_id}
 \title{Set Template ID}
 \usage{
-get_template_id()
+get_template_id(...)
+}
+\arguments{
+\item{\dots}{Additional arguments passed to \code{\link{captr_POST}}.}
+}
+\value{
+named list
 }
 \description{
 To digitize documents, create a template using the Captricity Web UI at \url{https://shreddr.captricity.com/job/} 

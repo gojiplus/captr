@@ -4,24 +4,24 @@
 #' The template tells Captricity which data to get from where in the document.
 #' Get the template id of the template
 #' 
+#' @param \dots Additional arguments passed to \code{\link{captr_POST}}.
+#' 
+#' @return named list
+#' 
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/}
+#' 
 #' @examples \dontrun{
 #' get_template_id()
 #' }
 
-get_template_id <- function() {
+get_template_id <- function(...) {
     
     captr_CHECKAUTH()
  
-    h <- new_handle()
-    handle_setopt(h,  customrequest = "POST")
-    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
+ 	res <- captr_POST(path="document/", ...)
 
-    tag_con    <- curl_fetch_memory("https://shreddr.captricity.com/api/v1/document/", handle=h)
-    tag        <- fromJSON(rawToChar(tag_con$content))
-    tag
-    return(invisible(tag))
+    return(invisible(res))
 
 }
 

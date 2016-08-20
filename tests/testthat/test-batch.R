@@ -30,6 +30,9 @@ test_that("batch creation happens successfully", {
   u_file <- upload_image(batch$id, dir(path, full.names = TRUE)[1])
   expect_that(u_file$uuid, is_a("character"))
 
+  t_id <- get_template_id()
+  expect_that(t_id, is_a("list"))
+  
   ready <- test_readiness(batch$id)
   expect_equal(length(ready$errors) > 1, TRUE)
 
