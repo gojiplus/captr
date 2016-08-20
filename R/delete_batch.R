@@ -1,8 +1,11 @@
 #' Delete a Batch
 #' 
 #' @param batch_id ID for the batch
+#' 
 #' @export
+#' 
 #' @references \url{https://shreddr.captricity.com/developer/api-reference/#v1-batches}
+#' 
 #' @examples \dontrun{
 #' delete_batch("batch_id")
 #' }

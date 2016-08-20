@@ -26,6 +26,10 @@ test_that("batch creation happens successfully", {
   l_files <- list_batch_files(batch$id)
   expect_that(l_files,  is_a("list"))
 
+  path <- system.file("extdata/wisc_ads", package = "captr")
+  u_file <- upload_image(batch$id, dir(path, full.names = TRUE)[1])
+  expect_that(u_file$uuid, is_a("character"))
+
   ready <- test_readiness(batch$id)
   expect_equal(length(ready$errors) > 1, TRUE)
 

@@ -4,12 +4,14 @@
 \alias{upload_image}
 \title{Upload Image}
 \usage{
-upload_image(batch_id = "", path_to_image = "")
+upload_image(batch_id = "", path_to_image = "", ...)
 }
 \arguments{
 \item{batch_id}{ID for the batch}
 
 \item{path_to_image}{Path to the image you want OCRd}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_POST}}.}
 }
 \description{
 Upload an image to captricity.
