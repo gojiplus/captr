@@ -3,7 +3,8 @@
 ^\.travis\.yml$
 ^appveyor\.yml$
 ^\.httr-oauth$
-dev
+^dev$
+^docs$
 ^cran-comments.md$
 ^tests\testthat\captr_key.enc$
 ^.gitignore$
