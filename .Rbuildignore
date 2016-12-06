@@ -9,3 +9,4 @@
 ^tests\testthat\captr_key.enc$
 ^.gitignore$
 ^.gitattributes$
+^_pkgdown\.yml$
