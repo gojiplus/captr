@@ -23,4 +23,3 @@ user_profile()
 \references{
 \url{https://shreddr.captricity.com/developer/api-reference/#v1-user_profile}
 }
-

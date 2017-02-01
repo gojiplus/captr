@@ -25,4 +25,3 @@ list_batch_files("batch_id")
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-

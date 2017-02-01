@@ -9,4 +9,3 @@ captr_CHECKAUTH()
 \description{
 Check if authentication information is there
 }
-

@@ -2,8 +2,8 @@
 % Please edit documentation in R/captr.R
 \docType{package}
 \name{captr-package}
-\alias{captr}
 \alias{captr-package}
+\alias{captr}
 \title{captr: R Client for the Capticrity API}
 \description{
 OCR images and forms. See \url{https://captricity.com/}. 
@@ -15,4 +15,3 @@ If you haven't already, you can get this at \url{https://shreddr.captricity.com/
 \author{
 Gaurav Sood
 }
-

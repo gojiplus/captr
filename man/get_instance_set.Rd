@@ -20,4 +20,3 @@ get_instance_set("instance_set_id")
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-

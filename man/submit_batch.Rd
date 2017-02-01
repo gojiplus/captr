@@ -22,4 +22,3 @@ submit_batch("batch_id")
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-

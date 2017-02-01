@@ -20,4 +20,3 @@ delete_job("job_id")
 \references{
 \url{https://shreddr.captricity.com/developer/api-reference/#v1-batches}
 }
-

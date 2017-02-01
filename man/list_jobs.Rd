@@ -17,4 +17,3 @@ list_jobs()
 \references{
 \url{https://shreddr.captricity.com/developer/api-reference/#v1-jobs}
 }
-

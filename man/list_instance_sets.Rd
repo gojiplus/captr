@@ -21,4 +21,3 @@ list_instance_sets(job_id = "job_id")
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-

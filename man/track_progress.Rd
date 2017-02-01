@@ -20,4 +20,3 @@ track_progress("job_id")
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-

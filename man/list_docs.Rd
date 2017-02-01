@@ -24,4 +24,3 @@ list_docs()
 \references{
 \url{https://shreddr.captricity.com/developer/api-reference/#v1-documents}
 }
-

@@ -24,4 +24,3 @@ set_batch_template("batch_id", template_id)
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-

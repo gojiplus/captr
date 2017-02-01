@@ -22,4 +22,3 @@ get_all(job_id ="job_id")
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-

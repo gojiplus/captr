@@ -25,4 +25,3 @@ get_template_id()
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-

@@ -25,4 +25,3 @@ create_batch(batch_name="name_of_batch")
 \references{
 \url{https://shreddr.captricity.com/developer/api-reference/#v1-batch}
 }
-

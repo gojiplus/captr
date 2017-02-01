@@ -24,4 +24,3 @@ upload_image("batch_id", "path_to_image")
 \references{
 \url{https://shreddr.captricity.com/developer/}
 }
-
