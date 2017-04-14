@@ -1,6 +1,9 @@
 # captr 0.3.0 
 
 * Make returns visible
+* Improved documentation 
+* Support the dots for list_jobs()
+* 
 
 # captr 0.2.0
 

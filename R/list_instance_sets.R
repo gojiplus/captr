@@ -6,11 +6,12 @@
 #' @param job_id ID for the job (which you get from related_job_id field of submit_batch)
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/}
+#' 
 #' @examples \dontrun{
 #' list_instance_sets(job_id = "job_id")
 #' }
 
-list_instance_sets <- function(job_id="") {
+list_instance_sets <- function(job_id = "") {
     
     captr_CHECKAUTH()
  

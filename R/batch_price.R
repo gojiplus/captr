@@ -15,8 +15,6 @@
 #' }
 
 batch_price <- function(batch_id = NULL, ...) {
-
-    captr_CHECKAUTH()
    
     if (is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 

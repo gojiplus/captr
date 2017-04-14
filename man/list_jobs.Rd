@@ -4,7 +4,7 @@
 \alias{list_jobs}
 \title{List Jobs}
 \usage{
-list_jobs()
+list_jobs(...)
 }
 \description{
 A list of jobs owned by the calling account.
