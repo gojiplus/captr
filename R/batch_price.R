@@ -9,11 +9,12 @@
 #' 
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/}
+#' 
 #' @examples \dontrun{
 #' batch_price("batch_id")
 #' }
 
-batch_price <- function(batch_id="", ...) {
+batch_price <- function(batch_id = NULL, ...) {
 
     captr_CHECKAUTH()
    

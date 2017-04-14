@@ -4,13 +4,14 @@
 #' 
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/api-reference/#v1-jobs}
+#' 
 #' @examples \dontrun{
 #' list_jobs()
 #' }
 
-list_jobs <- function() {
+list_jobs <- function(...) {
     
-    res <- captr_GET("job/", NULL)
+    res <- captr_GET("job/", ...)
 
     cat("No. of jobs:", nrow(res), "\n")
 
