@@ -6,6 +6,9 @@
 \usage{
 list_jobs(...)
 }
+\arguments{
+\item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
+}
 \description{
 A list of jobs owned by the calling account.
 }

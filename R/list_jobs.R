@@ -2,6 +2,8 @@
 #'
 #' A list of jobs owned by the calling account. 
 #' 
+#' @param \dots Additional arguments passed to \code{\link{captr_GET}}.
+#' 
 #' @export
 #' @references \url{https://shreddr.captricity.com/developer/api-reference/#v1-jobs}
 #' 
