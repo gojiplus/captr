@@ -19,7 +19,7 @@ user_profile <- function(...)
   
 	res <- captr_GET(path="account/user-profile", ...)
 
-    return(invisible(res))
+    res
 
 }
 

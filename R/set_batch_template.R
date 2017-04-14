@@ -28,7 +28,8 @@ set_batch_template <- function(batch_id="", template_id="") {
     tag        <- rawToChar(tag_con$content)
   
     status     <- ifelse(tag_con$status_code==200, "Successfully Assigned", "Problem with the request")
-    return(status)
+    
+    status
 
 }
 

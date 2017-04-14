@@ -1,3 +1,7 @@
+# captr 0.3.0 
+
+* Make returns visible
+
 # captr 0.2.0
 
 * Using new abstract GET/POST functions: create_batch, get_batch_details, batch_price, list_batch_files, etc.

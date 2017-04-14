@@ -26,7 +26,7 @@ upload_image <- function(batch_id="", path_to_image="", ...) {
     query = list(uploaded_file = form_file(path_to_image))
     res <- captr_POST(path=paste0("batch/", batch_id, "/batch-file/"), query,...)
 
-    return(invisible(res))
+    res
 
 }
 

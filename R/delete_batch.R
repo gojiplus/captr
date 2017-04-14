@@ -26,10 +26,10 @@ delete_batch <- function(batch_id="") {
     if (tag$status=="success") {
     	cat("Batch", batch_id, "successfully deleted \n")
     } else {
-    	cat("Error:", tag$status, "\n")
+    	warning("Error:", tag$status, "\n")
     }
 
-    return(invisible(tag))
+    tag
     
 }
 

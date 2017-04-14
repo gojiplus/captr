@@ -23,7 +23,7 @@ create_batch <- function(batch_name = NULL, ...) {
 
 	res <- captr_POST(path="batch/", query, ...)
 
-    invisible(res)
+    res
 }
 
 

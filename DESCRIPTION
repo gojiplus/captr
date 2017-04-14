@@ -1,13 +1,13 @@
 Package: captr
 Title: Client for the Captricity API
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: person("Gaurav", "Sood", email = "gsood07@gmail.com", role = c("aut", "cre"))
 Maintainer: Gaurav Sood <gsood07@gmail.com>
 Description: Get text from images of text using Captricity Optical Character
     Recognition (OCR) API. Captricity allows you to get text from handwritten
     forms --- think surveys --- and other structured paper documents. And it can
     output data in form a delimited file keeping field information intact. For more
-    information, read https://shreddr.captricity.com/developer/overview/.
+    information, read <https://shreddr.captricity.com/developer/overview/>.
 URL: http://github.com/soodoku/captR
 BugReports: http://github.com/soodoku/captR/issues
 Depends:
@@ -22,4 +22,4 @@ Suggests:
     testthat,
     rmarkdown,
     knitr (>= 1.11)
-RoxygenNote: 6.0.0
+RoxygenNote: 6.0.1

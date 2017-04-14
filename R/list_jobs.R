@@ -14,7 +14,7 @@ list_jobs <- function() {
 
     cat("No. of jobs:", nrow(res), "\n")
 
-    return(invisible(res))
+    res
 
 }
 

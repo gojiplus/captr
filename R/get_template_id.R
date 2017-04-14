@@ -21,7 +21,7 @@ get_template_id <- function(...) {
  
  	res <- captr_POST(path="document/", ...)
 
-    return(invisible(res))
+    res
 
 }
 

@@ -19,7 +19,7 @@ list_batch_files <- function(batch_id="", ...) {
 
     res <- captr_GET(paste0("batch/", batch_id, "/batch-file"), ...)
 
-    return(invisible(res))
+    res
 
 }
 

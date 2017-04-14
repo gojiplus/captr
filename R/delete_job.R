@@ -19,10 +19,7 @@ delete_job <- function(job_id="") {
 
     tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/job/", job_id), handle=h)
     tag        <- fromJSON(rawToChar(tag_con$content))
-    
-    cat(tag[[1]], "\n")
-    
-    return(invisible(tag))
-    
+        
+    tag   
 }
 

@@ -21,7 +21,6 @@ batch_price <- function(batch_id="", ...) {
 
     res <- captr_GET(paste0("batch/", batch_id, "/price"), ...)
 
-    return(invisible(res))
-
+    res
 }
 

@@ -21,8 +21,8 @@ get_instance_set <- function(instance_set_id="") {
 
     tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/instance-set/", instance_set_id, "/shred/"), handle=h)
     tag        <- fromJSON(rawToChar(tag_con$content))
+
     tag
-    return(invisible(tag))
     
 }
 

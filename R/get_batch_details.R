@@ -19,6 +19,6 @@ get_batch_details <- function(batch_id="", ...) {
 
     res <- captr_GET("batch/", batch_id, ...)
 
-    return(invisible(res))
+    res
 }
 

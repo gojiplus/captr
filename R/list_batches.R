@@ -18,7 +18,7 @@ list_batches <- function(...) {
 
     cat("No. of batches:", nrow(res), "\n")
 
-    return(invisible(res))
+    res
 
 }
 

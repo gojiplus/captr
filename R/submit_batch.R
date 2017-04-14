@@ -19,7 +19,7 @@ submit_batch <- function(batch_id="", ...) {
 
     res <- captr_POST(path=paste0("batch/", batch_id, "/submit"), ...)
 
-    return(invisible(res))
+    res
     
 }
 

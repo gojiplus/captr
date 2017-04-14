@@ -20,7 +20,7 @@ list_docs <- function(...) {
 
     cat("No. of document resources:", nrow(res), "\n")
 
-    return(invisible(res))
+    res
 }
 
 

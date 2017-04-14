@@ -22,8 +22,7 @@ list_instance_sets <- function(job_id="") {
 
     tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/job/", job_id, "/instance-set/"), handle=h)
     tag        <- fromJSON(rawToChar(tag_con$content))
-    tag
-    return(invisible(tag))
-    
+
+    tag    
 }
 

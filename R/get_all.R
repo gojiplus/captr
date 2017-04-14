@@ -21,6 +21,7 @@ get_all <- function(job_id ="", output_dir="./") {
     handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
 
     tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/job/", job_id, "/csv/"), handle=h)
-    curl_download(tag_con$url, destfile=paste0(output_dir, job_id, ".csv"))    
+    curl_download(tag_con$url, destfile=paste0(output_dir, job_id, ".csv"))  
+      
 }
 
