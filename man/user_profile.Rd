@@ -10,7 +10,9 @@ user_profile(...)
 \item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
 }
 \value{
-named list
+named list with the following elements: \code{username, deny_batch_submission_for_digitization,
+account_balance, user_id, enrolled_subscription_is_annualized, enrolled_subscription, 
+enrolled_subscription_is_trial, trial_eligible, remaining_quota}
 }
 \description{
 Provides account information for the provided API Token.
