@@ -16,12 +16,9 @@
 #' }
 
 get_template_id <- function(...) {
-    
-    captr_CHECKAUTH()
- 
- 	res <- captr_POST(path="document/", ...)
 
-    res
+  res <- captr_POST(path = "document/", ...)
+
+  res
 
 }
-

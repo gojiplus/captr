@@ -15,12 +15,10 @@
 #' }
 
 list_docs <- function(...) {
-    
-    res <- captr_GET("document/", ...)
 
-    cat("No. of document resources:", nrow(res), "\n")
+  res <- captr_GET("document/", ...)
 
-    res
+  cat("No. of document resources:", nrow(res), "\n")
+
+  res
 }
-
-

@@ -16,26 +16,24 @@
 #' set_token("app_token")
 #' }
 
-set_token <- 
-function(app_token=NULL, force=FALSE) {
+set_token <- function(app_token = NULL, force = FALSE) {
 
-    env_id <- Sys.getenv('CaptricityToken')
-    
-    # If you cannot find CaptricityToken in the environment
-    if (identical(env_id, "") | !force) {
+  env_id <- Sys.getenv("CaptricityToken")
 
-    	# First look for arguments passed in the function
-	    if (!is.null(app_token)) {
-	        Sys.setenv(CaptricityToken = app_token)
-	       }
+  # If you cannot find CaptricityToken in the environment
+  if (identical(env_id, "") | !force) {
 
-		# Else ask user for the details    
-	    else {
-    		message("Couldn't find env var CaptricityToken. See ?set_token for more details.")
-			message("Please enter your CaptricityToken and press enter:")
-		  	pat <- readline(": ")
-        	Sys.setenv(CaptricityToken = pat)
-	        }
+  # First look for arguments passed in the function
+  if (!is.null(app_token)) {
+    Sys.setenv(CaptricityToken = app_token)
+  }
+
+  # Else ask user for the details
+  else {
+    message("Couldn't find env var CaptricityToken. See ?set_token for more details.")
+    message("Please enter your CaptricityToken and press enter:")
+    pat <- readline(": ")
+    Sys.setenv(CaptricityToken = pat)
     }
-
+  }
 }

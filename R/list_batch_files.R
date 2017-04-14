@@ -12,14 +12,12 @@
 #' }
 
 list_batch_files <- function(batch_id="", ...) {
-    
-    captr_CHECKAUTH()
- 
-    if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 
-    res <- captr_GET(paste0("batch/", batch_id, "/batch-file"), ...)
+  captr_CHECKAUTH()
 
-    res
+  if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 
+  res <- captr_GET(paste0("batch/", batch_id, "/batch-file"), ...)
+
+  res
 }
-

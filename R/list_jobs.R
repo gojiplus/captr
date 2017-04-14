@@ -12,13 +12,11 @@
 #' }
 
 list_jobs <- function(...) {
-    
-    res <- captr_GET("job/", ...)
 
-    cat("No. of jobs:", nrow(res), "\n")
+  res <- captr_GET("job/", ...)
 
-    res
+  cat("No. of jobs:", nrow(res), "\n")
+
+  res
 
 }
-
- 

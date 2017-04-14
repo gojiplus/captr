@@ -15,11 +15,10 @@
 #' }
 
 batch_price <- function(batch_id = NULL, ...) {
-   
+
     if (is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 
     res <- captr_GET(paste0("batch/", batch_id, "/price"), ...)
 
     res
 }
-

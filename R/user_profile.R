@@ -15,13 +15,11 @@
 #' }
 
 user_profile <- function(...) {
-    
-    captr_CHECKAUTH()
-  
-	res <- captr_GET(path="account/user-profile", ...)
 
-    res
+  captr_CHECKAUTH()
+
+  res <- captr_GET(path = "account/user-profile", ...)
+
+  res
 
 }
-
-

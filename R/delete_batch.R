@@ -11,25 +11,24 @@
 #' }
 
 delete_batch <- function(batch_id="") {
-   
-    captr_CHECKAUTH()
 
-    if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
+  captr_CHECKAUTH()
 
-    h <- new_handle()
-    handle_setopt(h,  customrequest = "DELETE")
-    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
+  if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 
-    tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/batch/", batch_id), handle=h)
-    tag        <- fromJSON(rawToChar(tag_con$content))
-    
-    if (tag$status=="success") {
-    	cat("Batch", batch_id, "successfully deleted \n")
-    } else {
-    	warning("Error:", tag$status, "\n")
-    }
+  h <- new_handle()
+  handle_setopt(h,  customrequest = "DELETE")
+  handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
 
-    tag
-    
+  tag_con <-  curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/batch/", batch_id), handle = h)
+  tag <-  fromJSON(rawToChar(tag_con$content))
+
+  if (tag$status == "success") {
+    cat("Batch", batch_id, "successfully deleted \n")
+  } else {
+    warning("Error:", tag$status, "\n")
+  }
+
+  tag
+
 }
-

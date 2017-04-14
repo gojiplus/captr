@@ -11,17 +11,15 @@
 #' }
 
 get_all <- function(job_id ="", output_dir="./") {
-   
-    captr_CHECKAUTH()
- 
-    if ( is.null(job_id) | job_id=="") stop("Provide a Valid Job ID.")
 
-    h <- new_handle()
-    handle_setopt(h,  customrequest = "GET")
-    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
+  captr_CHECKAUTH()
 
-    tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/job/", job_id, "/csv/"), handle=h)
-    curl_download(tag_con$url, destfile=paste0(output_dir, job_id, ".csv"))  
-      
+  if ( is.null(job_id) | job_id == "") stop("Provide a Valid Job ID.")
+
+  h <- new_handle()
+  handle_setopt(h,  customrequest = "GET")
+  handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
+
+  tag_con  <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/job/", job_id, "/csv/"), handle = h)
+  curl_download(tag_con$url, destfile = paste0(output_dir, job_id, ".csv"))
 }
-

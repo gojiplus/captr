@@ -1,7 +1,7 @@
 #' Create Batch
 #'
 #' Create a new batch. 
-#' 
+#'
 #' @param batch_name name of the batch; Required; character
 #' @param \dots Additional arguments passed to \code{\link{captr_POST}}.
 #'  
@@ -14,16 +14,12 @@
 #' }
 
 create_batch <- function(batch_name = NULL, ...) {
-    
-    captr_CHECKAUTH()
-  	
-  	if (is.null(batch_name) | identical(batch_name, "")) stop("Specify a valid batch_name.") 
 
-  	query <- list(name = batch_name)
+  if (is.null(batch_name) | identical(batch_name, "")) stop("Specify a valid batch_name.")
 
-	res <- captr_POST(path="batch/", query, ...)
+  query <-  list(name = batch_name)
 
-    res
+  res <-  captr_POST(path = "batch/", query, ...)
+
+  res
 }
-
-

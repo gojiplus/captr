@@ -7,19 +7,18 @@
 #' delete_job("job_id")
 #' }
 
-delete_job <- function(job_id="") {
-   
-    captr_CHECKAUTH()
+delete_job <- function(job_id = "") {
 
-    if ( is.null(job_id) | identical(job_id, "")) stop("Provide a Valid Job ID.")
+  captr_CHECKAUTH()
 
-    h <- new_handle()
-    handle_setopt(h,  customrequest = "DELETE")
-    handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
+  if ( is.null(job_id) | identical(job_id, "")) stop("Provide a Valid Job ID.")
 
-    tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/job/", job_id), handle=h)
-    tag        <- fromJSON(rawToChar(tag_con$content))
-        
-    tag   
+  h <- new_handle()
+  handle_setopt(h,  customrequest = "DELETE")
+  handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
+
+  tag_con  <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/job/", job_id), handle = h)
+  tag    <- fromJSON(rawToChar(tag_con$content))
+
+  tag
 }
-

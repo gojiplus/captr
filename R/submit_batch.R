@@ -12,14 +12,13 @@
 #' }
 
 submit_batch <- function(batch_id="", ...) {
-   
-    captr_CHECKAUTH()
 
-    if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
+  captr_CHECKAUTH()
 
-    res <- captr_POST(path=paste0("batch/", batch_id, "/submit"), ...)
+  if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 
-    res
-    
+  res <- captr_POST(path = paste0("batch/", batch_id, "/submit"), ...)
+
+  res
+
 }
-

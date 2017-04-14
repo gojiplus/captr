@@ -19,12 +19,11 @@
 #' }
 
 list_batches <- function(...) {
-      
-    res <- captr_GET("batch/", ...)
 
-    cat("No. of batches:", nrow(res), "\n")
+  res <- captr_GET("batch/", ...)
 
-    res
+  cat("No. of batches:", nrow(res), "\n")
+
+  res
 
 }
-

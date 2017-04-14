@@ -13,12 +13,11 @@
 #' get_batch_details("batch_id")
 #' }
 
-get_batch_details <- function(batch_id="", ...) {
-    
-    if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
+get_batch_details <- function(batch_id = "", ...) {
 
-    res <- captr_GET("batch/", batch_id, ...)
+  if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 
-    res
+  res <- captr_GET("batch/", batch_id, ...)
+
+  res
 }
-
