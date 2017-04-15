@@ -15,7 +15,7 @@
 #' upload_image("batch_id", "path_to_image")
 #' }
 
-upload_image <- function(batch_id="", path_to_image="", ...) {
+upload_image <- function(batch_id = "", path_to_image = "", ...) {
 
   captr_CHECKAUTH()
 

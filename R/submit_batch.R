@@ -11,9 +11,7 @@
 #' submit_batch("batch_id")
 #' }
 
-submit_batch <- function(batch_id="", ...) {
-
-  captr_CHECKAUTH()
+submit_batch <- function(batch_id = "", ...) {
 
   if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 

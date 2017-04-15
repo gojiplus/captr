@@ -12,7 +12,7 @@
 #' track_progress("job_id")
 #' }
 
-track_progress <- function(job_id="") {
+track_progress <- function(job_id = "") {
 
   captr_CHECKAUTH()
 

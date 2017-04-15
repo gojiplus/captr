@@ -4,10 +4,12 @@
 \alias{list_instance_sets}
 \title{List Instance Sets}
 \usage{
-list_instance_sets(job_id = "")
+list_instance_sets(job_id = "", ...)
 }
 \arguments{
 \item{job_id}{ID for the job (which you get from related_job_id field of submit_batch)}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
 }
 \description{
 List all the forms (instance sets) for a particular job. 

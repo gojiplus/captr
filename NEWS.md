@@ -3,8 +3,9 @@
 * Make returns visible
 * Improved documentation 
 * Support the dots for list_jobs()
-* linting 
+* extensive linting 
 * removed superfluous captr_CHECKAUTH() from a few functions
+* abstracted out captr_DELETE
 
 # captr 0.2.0
 

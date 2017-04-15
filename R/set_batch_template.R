@@ -15,7 +15,7 @@
 #' set_batch_template("batch_id", template_id)
 #' }
 
-set_batch_template <- function(batch_id="", template_id="") {
+set_batch_template <- function(batch_id = "", template_id = "") {
 
   captr_CHECKAUTH()
 

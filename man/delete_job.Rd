@@ -4,10 +4,12 @@
 \alias{delete_job}
 \title{Delete a Job}
 \usage{
-delete_job(job_id = "")
+delete_job(job_id = "", ...)
 }
 \arguments{
 \item{job_id}{ID for the job (which you get from related_job_id field of submit_batch)}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_DELETE}}.}
 }
 \description{
 Delete a Job

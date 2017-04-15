@@ -11,9 +11,7 @@
 #' list_batch_files("batch_id")
 #' }
 
-list_batch_files <- function(batch_id="", ...) {
-
-  captr_CHECKAUTH()
+list_batch_files <- function(batch_id = "", ...) {
 
   if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 

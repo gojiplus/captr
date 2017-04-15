@@ -10,7 +10,7 @@
 #' get_all(job_id ="job_id")
 #' }
 
-get_all <- function(job_id ="", output_dir="./") {
+get_all <- function(job_id = "", output_dir = "./") {
 
   captr_CHECKAUTH()
 
