@@ -4,10 +4,12 @@
 \alias{get_instance_set}
 \title{Get Instance Set}
 \usage{
-get_instance_set(instance_set_id = "")
+get_instance_set(instance_set_id = "", ...)
 }
 \arguments{
 \item{instance_set_id}{ID for the form (instance_set) (which you get from list_instance_sets)}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_GET}}.}
 }
 \description{
 If you are interested in getting data from one particular form, use this function.

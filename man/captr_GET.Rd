@@ -4,7 +4,7 @@
 \alias{captr_GET}
 \title{GET}
 \usage{
-captr_GET(path, query = NULL, ...)
+captr_GET(path = "", query = NULL, ...)
 }
 \arguments{
 \item{path}{path to specific API request URL}

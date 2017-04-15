@@ -4,10 +4,12 @@
 \alias{delete_batch}
 \title{Delete a Batch}
 \usage{
-delete_batch(batch_id = "")
+delete_batch(batch_id = "", ...)
 }
 \arguments{
 \item{batch_id}{ID for the batch}
+
+\item{\dots}{Additional arguments passed to \code{\link{captr_DELETE}}.}
 }
 \description{
 Delete a Batch

@@ -1,6 +1,7 @@
 #' Delete a Batch
 #' 
 #' @param batch_id ID for the batch
+#' @param \dots Additional arguments passed to \code{\link{captr_DELETE}}.
 #' 
 #' @export
 #' 
@@ -10,18 +11,11 @@
 #' delete_batch("batch_id")
 #' }
 
-delete_batch <- function(batch_id="") {
-
-  captr_CHECKAUTH()
+delete_batch <- function(batch_id = "", ...) {
 
   if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
 
-  h <- new_handle()
-  handle_setopt(h,  customrequest = "DELETE")
-  handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
-
-  tag_con <-  curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/batch/", batch_id), handle = h)
-  tag <-  fromJSON(rawToChar(tag_con$content))
+  tag <-  captr_DELETE(path = paste0("batch/", batch_id), ...)
 
   if (tag$status == "success") {
     cat("Batch", batch_id, "successfully deleted \n")

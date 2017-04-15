@@ -35,7 +35,7 @@ captr_CHECKAUTH <- function() {
 #' 
 #' @return list
 
-captr_GET <- function(path, query = NULL, ...) {
+captr_GET <- function(path = "", query = NULL, ...) {
 
   captr_CHECKAUTH()
 
@@ -57,12 +57,35 @@ captr_GET <- function(path, query = NULL, ...) {
 #' 
 #' @return list
 
-captr_POST <- function(path, query = NULL, ...) {
+captr_POST <- function(path = "", query = NULL, ...) {
 
   captr_CHECKAUTH()
 
   h <- new_handle()
   handle_setopt(h,  customrequest = "POST")
+  handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
+  handle_setform(h, .list = query)
+
+  tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/", path), handle = h, ...)
+  tag        <- fromJSON(rawToChar(tag_con$content))
+  tag
+}
+
+#'
+#' DELETE
+#' 
+#' @param path path to specific API request URL 
+#' @param query query list 
+#' @param \dots Additional arguments passed to \code{\link[curl]{curl_fetch_memory}}.
+#' 
+#' @return list
+
+captr_DELETE <- function(path = "", query = NULL, ...) {
+
+  captr_CHECKAUTH()
+
+  h <- new_handle()
+  handle_setopt(h,  customrequest = "DELETE")
   handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
   handle_setform(h, .list = query)
 
