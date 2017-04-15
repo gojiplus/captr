@@ -19,7 +19,7 @@ Create a new batch.
 }
 \examples{
 \dontrun{
-create_batch(batch_name="name_of_batch")
+create_batch(batch_name = "name_of_batch")
 }
 }
 \references{
