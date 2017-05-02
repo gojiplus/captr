@@ -30,7 +30,8 @@ set_token <- function(app_token = NULL, force = FALSE) {
 
   # Else ask user for the details
   else {
-    message("Couldn't find env var CaptricityToken. See ?set_token for more details.")
+    message("Couldn't find env var CaptricityToken.
+             See ?set_token for more details.")
     message("Please enter your CaptricityToken and press enter:")
     pat <- readline(": ")
     Sys.setenv(CaptricityToken = pat)

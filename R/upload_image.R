@@ -19,12 +19,17 @@ upload_image <- function(batch_id = "", path_to_image = "", ...) {
 
   captr_CHECKAUTH()
 
-  if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
+  if ( is.null(batch_id) | identical(batch_id, "")) {
+    stop("Provide a Valid Batch ID.")
+  }
 
-  if (!file.exists(path_to_image)) stop("File Doesn't Exist. Please check the path.")
+  if (!file.exists(path_to_image)) {
+    stop("File Doesn't Exist. Please check the path.")
+  }
 
   query <- list(uploaded_file = form_file(path_to_image))
-  res <- captr_POST(path = paste0("batch", "/", batch_id, "/", "batch-file", "/"), query, ...)
+  res <- captr_POST(path =
+             paste0("batch", "/", batch_id, "/", "batch-file", "/"), query, ...)
 
   res
 }

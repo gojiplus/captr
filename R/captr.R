@@ -22,8 +22,9 @@ NULL
 captr_CHECKAUTH <- function() {
 
   app_token <- Sys.getenv("CaptricityToken")
-  if (identical(app_token, "")) stop("Please set application token using set_token('app_token').")
-
+  if (identical(app_token, "")) {
+    stop("Please set application token using set_token('app_token').")
+  }
 }
 
 #'
@@ -43,7 +44,8 @@ captr_GET <- function(path = "", query = NULL, ...) {
   handle_setopt(h,  customrequest = "GET")
   handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
 
-  tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/", path, query), handle = h, ...)
+  target_url <- paste0("https://shreddr.captricity.com/api/v1/", path, query)
+  tag_con    <- curl_fetch_memory(target_url, handle = h, ...)
   tag        <- fromJSON(rawToChar(tag_con$content))
   tag
 }
@@ -66,7 +68,8 @@ captr_POST <- function(path = "", query = NULL, ...) {
   handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
   handle_setform(h, .list = query)
 
-  tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/", path), handle = h, ...)
+  target_url <- paste0("https://shreddr.captricity.com/api/v1/", path)
+  tag_con    <- curl_fetch_memory(target_url, handle = h, ...)
   tag        <- fromJSON(rawToChar(tag_con$content))
   tag
 }
@@ -89,7 +92,8 @@ captr_DELETE <- function(path = "", query = NULL, ...) {
   handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
   handle_setform(h, .list = query)
 
-  tag_con    <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/", path), handle = h, ...)
+  target_url <- paste0("https://shreddr.captricity.com/api/v1/", path)
+  tag_con    <- curl_fetch_memory(target_url, handle = h, ...)
   tag        <- fromJSON(rawToChar(tag_con$content))
   tag
 }

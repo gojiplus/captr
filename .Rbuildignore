@@ -10,3 +10,4 @@
 ^.gitignore$
 ^.gitattributes$
 ^_pkgdown\.yml$
+.lintr

@@ -13,7 +13,9 @@
 
 delete_batch <- function(batch_id = "", ...) {
 
-  if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
+  if ( is.null(batch_id) | identical(batch_id, "")) {
+    stop("Provide a Valid Batch ID.")
+  }
 
   tag <-  captr_DELETE(path = paste0("batch/", batch_id), ...)
 
@@ -24,5 +26,4 @@ delete_batch <- function(batch_id = "", ...) {
   }
 
   tag
-
 }

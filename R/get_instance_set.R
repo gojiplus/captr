@@ -15,9 +15,11 @@
 
 get_instance_set <- function(instance_set_id = "", ...) {
 
-  if ( is.null(instance_set_id) | identical(instance_set_id, "")) stop("Provide a Valid Instance Set ID.")
+  if ( is.null(instance_set_id) | identical(instance_set_id, "")) {
+    stop("Provide a Valid Instance Set ID.")
+  }
 
-  tag <- captr_GET(paste0("instance-set/", instance_set_id, "/shred/"), ...)
+  tag <- captr_GET(paste0("instance-set/", instance_set_id, "/", "shred/"), ...)
 
   tag
 

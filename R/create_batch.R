@@ -15,7 +15,9 @@
 
 create_batch <- function(batch_name = NULL, ...) {
 
-  if (is.null(batch_name) | identical(batch_name, "")) stop("Specify a valid batch_name.")
+  if (is.null(batch_name) | identical(batch_name, "")) {
+    stop("Specify a valid batch_name.")
+  }
 
   query <-  list(name = batch_name)
 

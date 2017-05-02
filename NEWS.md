@@ -1,3 +1,8 @@
+# captr 0.3.1
+
+* passes expect_lint_free
+* set_batch_template change status print to failed status warning
+
 # captr 0.3.0 
 
 * Make returns visible

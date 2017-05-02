@@ -17,7 +17,7 @@ list_instance_sets <- function(job_id = "", ...) {
 
   if ( is.null(job_id) | identical(job_id, "")) stop("Provide a Valid Job ID.")
 
-  tag <- captr_GET(paste0("job/", job_id, "/instance-set/"), ...)
+  tag <- captr_GET(paste0("job/", job_id, "/", "instance-set/"), ...)
 
   tag
 }

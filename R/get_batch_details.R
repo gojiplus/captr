@@ -15,7 +15,9 @@
 
 get_batch_details <- function(batch_id = "", ...) {
 
-  if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
+  if ( is.null(batch_id) | identical(batch_id, "")) {
+    stop("Provide a Valid Batch ID.")
+  }
 
   res <- captr_GET("batch/", batch_id, ...)
 

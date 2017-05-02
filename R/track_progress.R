@@ -22,7 +22,8 @@ track_progress <- function(job_id = "") {
   handle_setopt(h,  customrequest = "GET")
   handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
 
-  tag_con  <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/job/", job_id), handle = h)
+  target_url <- paste0("https://shreddr.captricity.com/api/v1/job/", job_id)
+  tag_con  <- curl_fetch_memory(target_url, handle = h)
   tag    <- fromJSON(rawToChar(tag_con$content))
 
   tag

@@ -19,20 +19,26 @@ set_batch_template <- function(batch_id = "", template_id = "") {
 
   captr_CHECKAUTH()
 
-  if ( is.null(template_id) | identical(template_id, "")) stop("Provide a Valid Template ID.")
-  if ( is.null(batch_id) | identical(batch_id, "")) stop("Provide a Valid Batch ID.")
+  if ( is.null(template_id) | identical(template_id, "")) {
+    stop("Provide a Valid Template ID.")
+  }
+
+  if ( is.null(batch_id) | identical(batch_id, "")) {
+    stop("Provide a Valid Batch ID.")
+  }
 
   h <- new_handle()
   handle_setopt(h,  customrequest = "PUT")
-  handle_setheaders(h, "Captricity-API-Token" = Sys.getenv('CaptricityToken'))
+  handle_setheaders(h, "Captricity-API-Token" = Sys.getenv("CaptricityToken"))
   handle_setform(h, documents = as.character(template_id))
 
-  tag_con  <- curl_fetch_memory(paste0("https://shreddr.captricity.com/api/v1/batch/", batch_id), handle = h)
+  target_url <- paste0("https://shreddr.captricity.com/api/v1/batch/", batch_id)
+  tag_con  <- curl_fetch_memory(target_url, handle = h)
   tag      <- rawToChar(tag_con$content)
 
-  status   <- ifelse(tag_con$status_code == 200, "Successfully Assigned", "Problem with the request")
-
-  print(status)
+  if (tag_con$status_code != 200) {
+    warning("There was a problem with the request")
+  }
 
   tag
 }

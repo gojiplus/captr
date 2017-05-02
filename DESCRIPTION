@@ -1,6 +1,6 @@
 Package: captr
 Title: Client for the Captricity API
-Version: 0.3.0
+Version: 0.3.1
 Authors@R: person("Gaurav", "Sood", email = "gsood07@gmail.com", role = c("aut", "cre"))
 Maintainer: Gaurav Sood <gsood07@gmail.com>
 Description: Get text from images of text using Captricity Optical Character
@@ -21,5 +21,6 @@ Imports:
 Suggests:
     testthat,
     rmarkdown,
-    knitr (>= 1.11)
+    knitr (>= 1.11),
+    lintr
 RoxygenNote: 6.0.1
