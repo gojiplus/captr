@@ -5,6 +5,7 @@
 ^\.httr-oauth$
 ^dev$
 ^docs$
+^revdep$
 ^cran-comments.md$
 ^tests\testthat\captr_key.enc$
 ^.gitignore$
