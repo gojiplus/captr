@@ -1,0 +1,10 @@
+url: http://soodoku.github.io/captr
+
+template:
+  params:
+    bootswatch: cosmo
+  default_assets: false
+
+authors:
+  Gaurav Sood:
+    href: https://github.com/soodoku
