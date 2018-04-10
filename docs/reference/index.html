@@ -39,6 +39,9 @@
 
 
 
+<!-- docsearch -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
   </head>
 
   <body>
@@ -95,6 +98,12 @@
 </li>
       </ul>
       
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -118,89 +127,25 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <h2 id="section-authentication" class="hasAnchor"><a href="#section-authentication" class="anchor"></a>Authentication</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
       <tr>
         <!--  -->
         <td>
-          <p><code><a href="batch_price.html">batch_price()</a></code> </p>
+          <p><code><a href="set_token.html">set_token()</a></code> </p>
         </td>
-        <td><p>Price of a Batch</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="captr-package.html">captr-package</a></code> </p>
-        </td>
-        <td><p>captr: R Client for the Capticrity API</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="captr_CHECKAUTH.html">captr_CHECKAUTH()</a></code> </p>
-        </td>
-        <td><p>Check if authentication information is there</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="captr_DELETE.html">captr_DELETE()</a></code> </p>
-        </td>
-        <td><p>DELETE</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="captr_GET.html">captr_GET()</a></code> </p>
-        </td>
-        <td><p>GET</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="captr_POST.html">captr_POST()</a></code> </p>
-        </td>
-        <td><p>POST</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="create_batch.html">create_batch()</a></code> </p>
-        </td>
-        <td><p>Create Batch</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="delete_batch.html">delete_batch()</a></code> </p>
-        </td>
-        <td><p>Delete a Batch</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="delete_job.html">delete_job()</a></code> </p>
-        </td>
-        <td><p>Delete a Job</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="get_all.html">get_all()</a></code> </p>
-        </td>
-        <td><p>Get All the Data For a Particular Job in a csv</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="get_batch_details.html">get_batch_details()</a></code> </p>
-        </td>
-        <td><p>Get Details of a particular batch</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="get_instance_set.html">get_instance_set()</a></code> </p>
-        </td>
-        <td><p>Get Instance Set</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="get_template_id.html">get_template_id()</a></code> </p>
-        </td>
-        <td><p>Set Template ID</p></td>
-      </tr><tr>
+        <td><p>Sets Application Token</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-get-information" class="hasAnchor"><a href="#section-get-information" class="anchor"></a>Get Information</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
         <!--  -->
         <td>
           <p><code><a href="list_batches.html">list_batches()</a></code> </p>
@@ -233,15 +178,79 @@
       </tr><tr>
         <!--  -->
         <td>
-          <p><code><a href="set_batch_template.html">set_batch_template()</a></code> </p>
+          <p><code><a href="get_batch_details.html">get_batch_details()</a></code> </p>
         </td>
-        <td><p>Assign Template ID to a Batch</p></td>
+        <td><p>Get Details of a particular batch</p></td>
       </tr><tr>
         <!--  -->
         <td>
-          <p><code><a href="set_token.html">set_token()</a></code> </p>
+          <p><code><a href="get_template_id.html">get_template_id()</a></code> </p>
         </td>
-        <td><p>Sets Application Token</p></td>
+        <td><p>Set Template ID</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="track_progress.html">track_progress()</a></code> </p>
+        </td>
+        <td><p>Track Progress of a Job</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="batch_price.html">batch_price()</a></code> </p>
+        </td>
+        <td><p>Price of a Batch</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="user_profile.html">user_profile()</a></code> </p>
+        </td>
+        <td><p>User Profile</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-delete-stuff" class="hasAnchor"><a href="#section-delete-stuff" class="anchor"></a>Delete Stuff</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        <!--  -->
+        <td>
+          <p><code><a href="delete_batch.html">delete_batch()</a></code> </p>
+        </td>
+        <td><p>Delete a Batch</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="delete_job.html">delete_job()</a></code> </p>
+        </td>
+        <td><p>Delete a Job</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-the-rest" class="hasAnchor"><a href="#section-the-rest" class="anchor"></a>The Rest</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        <!--  -->
+        <td>
+          <p><code><a href="upload_image.html">upload_image()</a></code> </p>
+        </td>
+        <td><p>Upload Image</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="create_batch.html">create_batch()</a></code> </p>
+        </td>
+        <td><p>Create Batch</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="set_batch_template.html">set_batch_template()</a></code> </p>
+        </td>
+        <td><p>Assign Template ID to a Batch</p></td>
       </tr><tr>
         <!--  -->
         <td>
@@ -257,21 +266,9 @@
       </tr><tr>
         <!--  -->
         <td>
-          <p><code><a href="track_progress.html">track_progress()</a></code> </p>
+          <p><code><a href="get_all.html">get_all()</a></code> </p>
         </td>
-        <td><p>Track Progress of a Job</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="upload_image.html">upload_image()</a></code> </p>
-        </td>
-        <td><p>Upload Image</p></td>
-      </tr><tr>
-        <!--  -->
-        <td>
-          <p><code><a href="user_profile.html">user_profile()</a></code> </p>
-        </td>
-        <td><p>User Profile</p></td>
+        <td><p>Get All the Data For a Particular Job in a csv</p></td>
       </tr>
     </tbody>
     </table>
@@ -280,7 +277,10 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-authentication">Authentication</a></li>
+      <li><a href="#section-get-information">Get Information</a></li>
+      <li><a href="#section-delete-stuff">Delete Stuff</a></li>
+      <li><a href="#section-the-rest">The Rest</a></li>
     </ul>
   </div>
 </div>
@@ -298,6 +298,17 @@
    </div>
 
   
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    
+    apiKey: '',
+    indexName: 'captr',
+    inputSelector: 'input#search-input.form-control',
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+
 
   </body>
 </html>

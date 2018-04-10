@@ -12,3 +12,4 @@
 ^.gitattributes$
 ^_pkgdown\.yml$
 .lintr
+.github

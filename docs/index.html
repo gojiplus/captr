@@ -19,7 +19,7 @@
 <!-- mathjax --><script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--><!-- docsearch --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
 </head>
 <body>
     <div class="container template-home">
@@ -72,7 +72,13 @@
   </a>
 </li>
       </ul>
+<form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
 </div>
+      </form>
+      
+    </div>
 <!--/.nav-collapse -->
   </div>
 <!--/.container -->
@@ -91,43 +97,43 @@
 <h3 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h3>
 <p>To get the latest version on CRAN:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"captr"</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">"captr"</span>)</a></code></pre></div>
 <p>To get the current development version from GitHub:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"devtools"</span>)
-devtools::<span class="kw">install_github</span>(<span class="st">"soodoku/captr"</span>, <span class="dt">build_vignettes =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">"devtools"</span>)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"soodoku/captr"</span>, <span class="dt">build_vignettes =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <hr>
 </div>
 <div id="using-captr" class="section level3">
 <h3 class="hasAnchor">
 <a href="#using-captr" class="anchor"></a>Using captr</h3>
 <p>Read the vignette:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">vignette</span>(<span class="st">"using_captr"</span>, <span class="dt">package =</span> <span class="st">"captr"</span>)</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">vignette</span>(<span class="st">"using_captr"</span>, <span class="dt">package =</span> <span class="st">"captr"</span>)</a></code></pre></div>
 <p>or follow the overview below.</p>
 <p>Start by getting an application token and setting it using:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set_token</span>(<span class="st">"token"</span>)</code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">set_token</span>(<span class="st">"token"</span>)</a></code></pre></div>
 <p>Then, create a batch using:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">create_batch</span>(<span class="st">"batch_name"</span>)</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">create_batch</span>(<span class="st">"batch_name"</span>)</a></code></pre></div>
 <p>Once you have created a batch, you need to get the template ID (it tells Captricity what data to pull from where). Captricity requires a template. These templates can be created using the <a href="https://shreddr.captricity.com/job/">Web UI</a>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set_template_id</span>(<span class="st">"id"</span>)</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">set_template_id</span>(<span class="st">"id"</span>)</a></code></pre></div>
 <p>Next, assign the template ID to a batch:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set_batch_template</span>(<span class="st">"batch_id"</span>, <span class="st">"template_id"</span>)</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">set_batch_template</span>(<span class="st">"batch_id"</span>, <span class="st">"template_id"</span>)</a></code></pre></div>
 <p>Next, upload image(s) to a batch</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">upload_image</span>(<span class="dt">batch_id=</span><span class="st">"batch_id"</span>, <span class="dt">path_to_image=</span><span class="st">"image_path"</span>)</code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">upload_image</span>(<span class="dt">batch_id=</span><span class="st">"batch_id"</span>, <span class="dt">path_to_image=</span><span class="st">"image_path"</span>)</a></code></pre></div>
 <p>Next, check whether the batch is ready to be processed:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">test_readiness</span>(<span class="dt">batch_id=</span><span class="st">"batch_id"</span>)</code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">test_readiness</span>(<span class="dt">batch_id=</span><span class="st">"batch_id"</span>)</a></code></pre></div>
 <p>You may also want to find out how much would processing the batch set you back by:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">batch_price</span>(<span class="dt">batch_id=</span><span class="st">"batch_id"</span>)</code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">batch_price</span>(<span class="dt">batch_id=</span><span class="st">"batch_id"</span>)</a></code></pre></div>
 <p>Once you are ready, submit the batch:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">submit_batch</span>(<span class="dt">batch_id=</span><span class="st">"batch_id"</span>)</code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">submit_batch</span>(<span class="dt">batch_id=</span><span class="st">"batch_id"</span>)</a></code></pre></div>
 <p>Captricity excels in nomenclature confusion. So once a batch is submitted, it is then called a job. The id for the job can be obtained from the list that is returned from <code>submit_batch</code>. The field name is <code>related_job_id</code>.</p>
 <p>To track progress of a job, use:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">track_progress</span>(<span class="dt">job_id =</span><span class="st">"job_id"</span>)</code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">track_progress</span>(<span class="dt">job_id =</span><span class="st">"job_id"</span>)</a></code></pre></div>
 <p>List all forms (instance sets) associated with a job:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list_instance_sets</span>(<span class="dt">job_id=</span><span class="st">"job_id"</span>)</code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">list_instance_sets</span>(<span class="dt">job_id=</span><span class="st">"job_id"</span>)</a></code></pre></div>
 <p>If you want to download data from a particular form, use the <code>list_instance_sets</code> to get the form (instance_set) id and run:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">get_instance_set</span>(<span class="dt">instance_set_id=</span><span class="st">"instance_set_id"</span>)</code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">get_instance_set</span>(<span class="dt">instance_set_id=</span><span class="st">"instance_set_id"</span>)</a></code></pre></div>
 <p>Get csv of all your results from a job:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">get_all</span>(<span class="dt">job_id=</span><span class="st">"job_id"</span>)</code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">get_all</span>(<span class="dt">job_id=</span><span class="st">"job_id"</span>)</a></code></pre></div>
 <hr>
 </div>
 <div id="license" class="section level3">
@@ -193,6 +199,14 @@ devtools::<span class="kw">install_github</span>(<span class="st">"soodoku/captr
 </div>
 
   
-
-  </body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script>
+  docsearch({
+    
+    apiKey: '',
+    indexName: 'captr',
+    inputSelector: 'input#search-input.form-control',
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+</body>
 </html>

@@ -3,8 +3,37 @@ url: http://soodoku.github.io/captr
 template:
   params:
     bootswatch: cosmo
-  default_assets: false
+    docsearch:
+      api_key: 
+      index_name: captr
 
 authors:
   Gaurav Sood:
     href: https://github.com/soodoku
+
+reference:
+  - title: Authentication
+    contents:
+    - set_token
+
+  - title: Get Information
+    contents:
+    - starts_with("list_")
+    - get_batch_details
+    - get_template_id
+    - track_progress
+    - batch_price
+    - user_profile
+
+  - title: Delete Stuff
+    contents:
+    - starts_with("delete_")
+
+  - title: The Rest
+    contents:
+    - upload_image
+    - create_batch
+    - set_batch_template
+    - submit_batch
+    - test_readiness
+    - get_all
