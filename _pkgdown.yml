@@ -4,7 +4,7 @@ template:
   params:
     bootswatch: cosmo
     docsearch:
-      api_key: 
+      api_key: 1bd8c8695ca3327b4388677cb2464100
       index_name: captr
 
 authors:
